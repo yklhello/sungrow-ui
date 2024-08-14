@@ -1,0 +1,20 @@
+.sg-link{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: var(--sg-font-size-base);
+  font-weight: normal;
+}
+@each $val in primary, success, warning, info, danger {
+  .sg-link--$(val) {
+    color: var(--sg-color-$(val));
+  }
+}
+.sg-link.sg-link--underline{
+  text-decoration: underline;
+}

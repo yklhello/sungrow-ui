@@ -1,0 +1,53 @@
+{
+  "name": "@sungrow-ui/workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter @sungrow-ui/play dev",
+    "docs:dev": "pnpm --filter @sungrow-ui/docs dev",
+    "docs:build": "pnpm --filter @sungrow-ui/docs build",
+    "stroybook": "pnpm --filter @sungrow-ui/play storybook",
+    "build": "pnpm --filter sungrow-ui build",
+    "test": "echo 'todo'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^20.11.20",
+    "@types/shelljs": "^0.8.15",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vue/tsconfig": "^0.5.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-each": "^1.1.0",
+    "postcss-each-variables": "^0.3.0",
+    "postcss-for": "^2.1.1",
+    "postcss-nested": "^6.0.1",
+    "release-it": "^17.6.0",
+    "shelljs": "^0.8.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.4.0",
+    "vue-tsc": "^1.8.27"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@popperjs/core": "^2.11.8",
+    "@sungrow-ui/components": "workspace:*",
+    "@sungrow-ui/hooks": "workspace:*",
+    "@sungrow-ui/theme": "workspace:*",
+    "@sungrow-ui/utils": "workspace:*",
+    "async-validator": "^4.2.5",
+    "lodash-es": "^4.17.21",
+    "sungrow-ui": "workspace:*",
+    "vue": "^3.4.19"
+  }
+}
