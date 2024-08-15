@@ -46,14 +46,17 @@ importers:
         version: 3.4.35(typescript@5.5.4)
     devDependencies:
       '@lerna-lite/cli':
-        specifier: ^3.7.1
+        specifier: ^3.8.0
         version: 3.8.0(@lerna-lite/publish@3.8.0(typescript@5.5.4))(@lerna-lite/version@3.8.0(@lerna-lite/publish@3.8.0(typescript@5.5.4))(typescript@5.5.4))(typescript@5.5.4)
       '@lerna-lite/publish':
-        specifier: ^3.7.1
+        specifier: ^3.8.0
         version: 3.8.0(typescript@5.5.4)
       '@lerna-lite/version':
-        specifier: ^3.7.1
+        specifier: ^3.8.0
         version: 3.8.0(@lerna-lite/publish@3.8.0(typescript@5.5.4))(typescript@5.5.4)
+      '@octokit/core':
+        specifier: ^5.2.0
+        version: 5.2.0
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
