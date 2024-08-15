@@ -90,7 +90,6 @@ export default defineConfig({
       ],
       output: {
         assetFileNames: (assetInfo) => {
-          console.log(assetInfo)
           if (assetInfo.name === "style.css") return "index.css";
           if (assetInfo.type === 'asset' && /\.(css)$/i.test(assetInfo.name as string)) {
             return 'theme/[name].[ext]'

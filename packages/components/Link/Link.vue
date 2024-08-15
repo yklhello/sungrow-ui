@@ -17,7 +17,7 @@
 import type { LinkProps } from "./types";
 import Icon from "../Icon";
 
-const props = defineProps<LinkProps>();
+defineProps<LinkProps>();
 
 defineOptions({
   name: "SgLink",
