@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "index.md",
+  "private": true,
   "scripts": {
     "dev": "vitepress dev ./",
     "build": "vitepress build ./"
