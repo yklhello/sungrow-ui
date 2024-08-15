@@ -1,6 +1,6 @@
 {
   "name": "sungrow-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Components libary for Vue 3 + Ts",
   "files": [
     "dist"
@@ -24,13 +24,14 @@
     "./dist/index.css"
   ],
   "scripts": {
-    "build": "run-p build-umd build-es",
-    "build:watch": "run-p build-umd:watch build-es:watch",
+    "build": "run-p clean build-umd build-es",
+    "build:watch": "run-p clean build-umd:watch build-es:watch",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
     "build-umd:watch": "vite build --config vite.umd.config.ts --watch",
     "build-es:watch": "vite build --config vite.es.config.ts --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
     "release": "release-it"
   },
   "peerDependencies": {
