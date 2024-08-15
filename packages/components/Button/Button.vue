@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, inject, ref } from "vue";
 import type { ButtonProps, ButtonEmits, ButtonInstance } from "./types";
 import { throttle } from "lodash-es";
-import Icon from "../Icon";
+import SgIcon from "../Icon";
+import { BUTTON_GROUP_CTX_KEY } from "./contants";
 defineOptions({
   name: "SgButton",
 });
@@ -12,15 +13,31 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   useThrottle: true,
   throttleDuration: 500,
 });
+
 const emits = defineEmits<ButtonEmits>();
 const slots = defineSlots();
-
+const ctx = inject(BUTTON_GROUP_CTX_KEY, void 0);
 const _ref = ref<HTMLButtonElement>();
 
+const size = computed(() => {
+  return ctx?.size ?? props.size ?? "";
+});
+const type = computed(() => {
+  return ctx?.type ?? props.type ?? "";
+});
+const disabled = computed(() => {
+  return ctx?.disabled ?? props.disabled ?? false;
+});
 const handleBtnClick = (e: MouseEvent) => {
   emits("click", e);
 };
-const handlBtneCLickThrottle = throttle(handleBtnClick, props.throttleDuration);
+const handlBtneCLickThrottle = throttle(
+  handleBtnClick,
+  props.throttleDuration,
+  {
+    trailing: false,
+  }
+);
 
 defineExpose<ButtonInstance>({
   ref: _ref,
@@ -49,10 +66,23 @@ defineExpose<ButtonInstance>({
         useThrottle ? handlBtneCLickThrottle(e) : handleBtnClick(e)
     "
   >
-    <slot><Icon icon="search" color="red"></Icon></slot>
+    <template v-if="loading">
+      <slot name="loading">
+        <sg-icon
+          class="loading-icon"
+          :icon="loadingIcon ?? 'spinner'"
+        ></sg-icon>
+      </slot>
+    </template>
+    <sg-icon
+      v-if="icon && !loading"
+      :icon="icon"
+      :style="{ marginLeft: icon && !loading && $slots.default && '6px' }"
+    ></sg-icon>
+    <slot></slot>
   </component>
 </template>
 
-<style scoped>
+<style>
 @import "./style.css";
 </style>

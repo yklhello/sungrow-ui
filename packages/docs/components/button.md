@@ -23,7 +23,7 @@ prev:
 demo-preview=../demo/button/Basic.vue
 :::
 
-<!-- ## 禁用状态
+## 禁用状态
 
 你可以使用 `disabled` 属性来定义按钮是否被禁用。
 
@@ -39,6 +39,7 @@ demo-preview=../demo/button/Disabled.vue
 demo-preview=../demo/button/Icon.vue
 :::
 
+<!--
 ## 按钮组
 
 使用 `<er-button-group>` 对多个按钮分组。

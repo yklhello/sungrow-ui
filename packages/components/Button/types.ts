@@ -1,7 +1,7 @@
-import type { Ref, Component } from 'vue';
-export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info'
-export type ButtonSize = 'large' | 'medium' | 'small' | 'mini'
-export type NativeType = 'button' | 'submit' | 'reset'
+import type { Ref, Component } from "vue";
+export type ButtonType = "primary" | "success" | "warning" | "danger" | "info";
+export type ButtonSize = "large" | "medium" | "small" | "mini";
+export type NativeType = "button" | "submit" | "reset";
 
 export interface ButtonProps {
   tag?: string | Component;
@@ -20,9 +20,20 @@ export interface ButtonProps {
   throttleDuration?: number;
 }
 
+export interface ButtonGroupProps {
+  size?: ButtonSize;
+  type?: ButtonType;
+  disabled?: boolean;
+}
+
+export interface ButtonGroupContext {
+  size?: ButtonSize;
+  type?: ButtonType;
+  disabled?: boolean;
+}
 export interface ButtonEmits {
   (e: "click", value: MouseEvent): void;
 }
 export interface ButtonInstance {
-  ref: Ref<HTMLButtonElement | void>
+  ref: Ref<HTMLButtonElement | void>;
 }

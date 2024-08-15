@@ -9,6 +9,7 @@
     "docs:build": "pnpm --filter @sungrow-ui/docs build",
     "stroybook": "pnpm --filter @sungrow-ui/play storybook",
     "build": "pnpm --filter sungrow-ui build",
+    "build:watch": "pnpm --filter sungrow-ui build:watch",
     "test": "echo 'todo'"
   },
   "keywords": [],

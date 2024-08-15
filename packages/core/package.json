@@ -25,8 +25,11 @@
   ],
   "scripts": {
     "build": "run-p build-umd build-es",
+    "build:watch": "run-p build-umd:watch build-es:watch",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
+    "build-umd:watch": "vite build --config vite.umd.config.ts --watch",
+    "build-es:watch": "vite build --config vite.es.config.ts --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "release-it"
   },
