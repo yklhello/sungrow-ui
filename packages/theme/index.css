@@ -3,7 +3,7 @@
   /* colors */
   --sg-color-white: #ffffff;
   --sg-color-black: #000000;
-  --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+  --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, error: #f56c6c, info: #909399);
   --sg-bg-color: #ffffff;
   --sg-bg-color-page: #f2f3f5;
   --sg-bg-color-overlay: #ffffff;

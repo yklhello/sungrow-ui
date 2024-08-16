@@ -16,8 +16,9 @@
 <script lang="ts" setup>
 import type { LinkProps } from "./types";
 import Icon from "../Icon";
-
-defineProps<LinkProps>();
+withDefaults(defineProps<LinkProps>(), {
+  type: "primary",
+});
 
 defineOptions({
   name: "SgLink",

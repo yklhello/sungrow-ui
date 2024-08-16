@@ -9,9 +9,10 @@
   padding: 0;
   font-size: var(--sg-font-size-base);
   font-weight: normal;
+  margin-right: 8px;
 }
 @each $val in primary, success, warning, info, danger {
-  .sg-link--$(val) {
+  .sg-link.sg-link--$(val) {
     color: var(--sg-color-$(val));
   }
 }

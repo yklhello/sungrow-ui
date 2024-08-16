@@ -1,24 +1,34 @@
 <script setup lang="ts">
-import { SgIcon } from "sungrow-ui";
-import { SgLink } from "sungrow-ui";
-import { SgButton, SgButtonGroup } from "sungrow-ui";
+import { SgAlert } from "sungrow-ui";
 </script>
 
 <template>
-  <sg-button type="primary" icon="search" @click="console.log(222)"
-    >hello</sg-button
-  >
-  <sg-button type="danger">危险</sg-button>
-  <br />
-  <sg-button-group>
-    <sg-button type="primary">基础</sg-button>
-    <sg-button type="danger">危险</sg-button>
-    <sg-button type="danger">危险</sg-button>
-  </sg-button-group>
-  <h1>hello</h1>
-  <SgIcon icon="search" color="red"></SgIcon>
-  <SgIcon icon="spinner"></SgIcon>
-  <SgLink underline type="primary" icon="search">111</SgLink>
+  <div style="max-width: 600px">
+    <sg-alert title="Success alert" type="success" />
+    <sg-alert title="Info alert" type="info" />
+    <sg-alert title="Warning alert" type="warning" />
+    <sg-alert title="Error alert" type="error" />
+  </div>
+  <div style="max-width: 600px">
+    <sg-alert title="Success alert" type="success" effect="dark" />
+    <sg-alert title="Info alert" type="info" effect="dark" />
+    <sg-alert title="Warning alert" type="warning" effect="dark" center />
+    <sg-alert title="Error alert" type="error" effect="dark" center />
+  </div>
+  <div style="max-width: 600px">
+    <sg-alert title="Success alert" type="success" effect="dark" center />
+    <sg-alert
+      title="Info alert"
+      type="info"
+      effect="dark"
+      close-text="关闭"
+      show-icon="true"
+    />
+    <sg-alert title="Warning alert" type="warning" effect="dark"
+      >hello</sg-alert
+    >
+    <sg-alert title="Error alert" type="error" effect="dark" />
+  </div>
 </template>
 <style>
 @import "sungrow-ui/dist/theme/Link.css";
