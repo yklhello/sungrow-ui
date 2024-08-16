@@ -1,6 +1,6 @@
 {
   "name": "@sungrow-ui/workspace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,14 @@
     "stroybook": "pnpm --filter @sungrow-ui/play storybook",
     "build": "pnpm --filter sungrow-ui build",
     "build:watch": "pnpm --filter sungrow-ui build:watch",
-    "test": "echo 'todo'"
+    "test": "echo 'todo'",
+    "changeset": "changeset"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.11.20",
     "@types/shelljs": "^0.8.15",
