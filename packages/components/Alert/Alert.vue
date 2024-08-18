@@ -2,17 +2,17 @@
 import { computed, ref } from "vue";
 import SgIcon from "../Icon";
 import { typeIconMap } from "@sungrow-ui/utils";
-import { type AlertPorps, type AlertInstance } from "./types";
+import { type AlertPorps, type AlertInstance, type AlertEmits } from "./types";
 
 defineOptions({
-  name: "SgIcon",
+  name: "SgAlert",
 });
 const props = withDefaults(defineProps<AlertPorps>(), {
   effect: "light",
   type: "info",
   closable: true,
 });
-const emits = defineEmits(["close"]);
+const emits = defineEmits<AlertEmits>();
 const visible = ref(true);
 const iconName = computed(() => typeIconMap.get(props.type) ?? "circle-info");
 

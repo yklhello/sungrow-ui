@@ -1,3 +1,5 @@
+export type AlertType = "success" | "info" | "warning" | "danger";
+
 export interface AlertPorps {
   title?: string;
   type?: "success" | "warning" | "info" | "error";
@@ -7,9 +9,10 @@ export interface AlertPorps {
   showIcon?: boolean;
   closeText?: string;
   effect?: "light" | "dark";
-  onClose?: () => void;
 }
-
+export interface AlertEmits {
+  (e: "close"): void;
+}
 export interface AlertInstance {
   close: () => void;
   open: () => void;
